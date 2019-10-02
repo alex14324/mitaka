@@ -158,8 +158,4 @@ npm run test
 npm run build
 ```
 
-For loading an unpacked extension, please follow the procedures described at https://developer.chrome.com/extensions/getstarted.
-
-## Misc
-
-Mitaka/見たか means "Have you seen it?" in Japanese.
+https://github.com/alex14324
