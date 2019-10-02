@@ -1,0 +1,88 @@
+{
+  "name": "mitaka",
+  "version": "0.61.0",
+  "description": "OSINT friendly IOC (Indicator of Compromise) saerch tool",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint --ext .ts src test",
+    "prettier": "prettier \"src/**/*.ts\" \"test/**/*.ts\"",
+    "prettier:write": "npm run prettier -- --write",
+    "build": "cross-env NODE_ENV=production webpack",
+    "build:dev": "cross-env NODE_ENV=development webpack",
+    "build-zip": "node scripts/build-zip.js",
+    "watch": "npm run build -- --watch",
+    "watch:dev": "cross-env HMR=true npm run build:dev -- --watch",
+    "test": "nyc mocha -r ts-node/register \"test/**/*.spec.ts\"",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
+  },
+  "nyc": {
+    "include": [
+      "src/*.ts",
+      "src/**/*.ts"
+    ],
+    "extension": [
+      ".ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "reporter": [
+      "html",
+      "text"
+    ],
+    "sourceMap": true,
+    "all": true
+  },
+  "author": "ninoseki",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ninoseki/mitaka.git"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "crypto-js": "^3.1.9-1",
+    "ioc-extractor": "^2.2.0",
+    "mustache": "^3.1.0",
+    "qs": "^6.9.0",
+    "throttle-debounce": "^2.1.0",
+    "url": "^0.11.0"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.3",
+    "@types/crypto-js": "^3.1.43",
+    "@types/jsdom": "^12.2.4",
+    "@types/mocha": "^5.2.7",
+    "@types/moxios": "^0.4.9",
+    "@types/mustache": "^0.8.32",
+    "@types/node": "^12.7.8",
+    "@types/qs": "^6.5.3",
+    "@types/sinon": "^7.0.13",
+    "@types/throttle-debounce": "^2.1.0",
+    "@types/window-or-global": "^1.0.0",
+    "@typescript-eslint/eslint-plugin": "^2.3.1",
+    "@typescript-eslint/parser": "^2.3.1",
+    "archiver": "^3.1.1",
+    "chai": "^4.2.0",
+    "copy-webpack-plugin": "^5.0.4",
+    "coveralls": "^3.0.6",
+    "cross-env": "^6.0.0",
+    "eslint": "^6.4.0",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "jsdom": "^15.1.1",
+    "mocha": "^6.2.0",
+    "moxios": "^0.4.0",
+    "nyc": "^14.1.1",
+    "prettier": "^1.18.2",
+    "sinon": "^7.5.0",
+    "ts-loader": "^6.1.2",
+    "ts-node": "^8.4.1",
+    "typescript": "^3.6.3",
+    "webextension-polyfill-ts": "^0.10.0",
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9",
+    "webpack-extension-reloader": "^1.1.1",
+    "window-or-global": "^1.0.1"
+  }
+}
