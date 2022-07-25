@@ -8,7 +8,7 @@ Mitaka is a browser extension for OSINT search which can:
 - Extract & refang IoC from a selected block of text.
   - E.g. `example[.]com` to `example.com`, `test[at]example.com` to `test@example.com`, `hxxp://example.com` to `http://example.com`, etc.
 - Search / scan it on various engines.
-  - E.g. VirusTotal, urlscan.io, Censys, Shodan, etc.
+  - E.g. VirusTotal, urlscan.io, Censys, Shodan, CriminalIP etc.
 
 ## Features
 
@@ -71,6 +71,7 @@ Mitaka is a browser extension for OSINT search which can:
 | RiskIQ               | http://community.riskiq.com            | ip / domain / email / gaTrackID   |
 | SecurityTrails       | https://securitytrails.com             | ip / domain / email               |
 | Shodan               | https://www.shodan.io                  | ip / domain / asn                 |
+| CriminalIP           | https://www.criminalip.io/             | ip / domain / asn / text          |
 | Sploitus             | https://sploitus.com                   | cve                               |
 | SpyOnWeb             | http://spyonweb.com                    | ip / domain / gaPubID / gaTrackID |
 | Talos                | https://talosintelligence.com          | ip / domain                       |
